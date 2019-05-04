@@ -3,14 +3,21 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.*;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.BorderPane;
 import javafx.geometry.*;
+
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 
 import java.util.Arrays;
 
 public class task extends Application{
 
-  //ObservableList<classSchedule> classList = new ObservableList<>();
+  ObservableList<classSchedule> classList;
+  Scene primaryScene;
+  Stage primaryStage;
 
     public static void main(String[] args){
         launch(args);
@@ -19,6 +26,15 @@ public class task extends Application{
 
     @Override
     public void start(Stage primaryStage){
+
+        classList = FXCollections.observableArrayList();
+
+        classList.addAll(new classSchedule("Graphical User Interface", "TueThu 8:00AM-10AM", "Ben Steichen",
+                                           "8-2324", "8/23/2019", "12/15/2019", "3 units"),
+                         new classSchedule("Numerical Methods", "MonWed 1:00PM-2:45PM", "John Smith",
+                                           "8-3745", "8/23/2019", "12/15/2019", "3 units"),
+                         new classSchedule("Software Engineering", "MonWedFri 9:00AM-10AM", "Mellisa Wang",
+                                           "3-1723", "8/23/2019", "12/15/2019", "3 units"));
 
         TableView<classSchedule> tableView = new TableView<>();
         Button addButton = new Button("Add");
@@ -64,32 +80,27 @@ public class task extends Application{
 
         tableView.getColumns().addAll(Arrays.asList(column0, column1, column2, column3, column4, column5, column6, column7));
 
-        tableView.getItems().add(new classSchedule("Graphical User Interface", "TueThu 8:00AM-10AM", "Ben Steichen",
-                                                    "8-2324", "8/23/2019", "12/15/2019", "3 units"));
-
-        tableView.getItems().add(new classSchedule("Numerical Methods", "MonWed 1:00PM-2:45PM", "John Smith",
-                                                    "8-3745", "8/23/2019", "12/15/2019", "3 units"));
-
-        tableView.getItems().add(new classSchedule("Software Engineering", "MonWedFri 9:00AM-10AM", "Mellisa Wang",
-                                                    "3-1723", "8/23/2019", "12/15/2019", "3 units"));
-
+        tableView.getItems().addAll(classList);
 
         HBox hbox = new HBox(addButton, dropButton, swapButton);
         addButton.setPadding(new Insets(10));
         dropButton.setPadding(new Insets(10));
         swapButton.setPadding(new Insets(10));
 
+        BorderPane borderPane = new BorderPane();
+        borderPane.setCenter(tableView);
+        borderPane.setBottom(hbox);
 
-        VBox vbox = new VBox(tableView, hbox);
+        //TopBar part
+        borderPane.setTop(new TopBar().getTopBar());
 
-        GridPane gridPane = new GridPane();
-        gridPane.add(vbox, 0, 0);
-        gridPane.add(hbox, 0, 1);
-
-        Scene scene = new Scene(gridPane, 950, 400);
-        primaryStage.setScene(scene);
+        primaryScene = new Scene(borderPane, 950, 400);
+        primaryStage.setScene(primaryScene);
+        primaryStage.setMaximized(true);
         primaryStage.setTitle("CPP Broncodirect");
         primaryStage.show();
+
+        this.primaryStage = primaryStage;
     }
 
 }
