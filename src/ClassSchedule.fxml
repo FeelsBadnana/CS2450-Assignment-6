@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClassScheduleController">
+    <columns>
+        <TableColumn editable="false" prefWidth="50.0" sortable="false">
+            <graphic>
+                <CheckBox fx:id="column0" mnemonicParsing="false"/>
+            </graphic></TableColumn>
+        <TableColumn fx:id="column1" editable="false" prefWidth="200.0" sortable="false" text="Class" />
+        <TableColumn fx:id="column2" editable="false" prefWidth="200.0" sortable="false" text="Day/Times" />
+        <TableColumn fx:id="column3" editable="false" prefWidth="100.0" sortable="false" text="Instructor" />
+        <TableColumn fx:id="column4" editable="false" prefWidth="100.0" sortable="false" text="Room" />
+        <TableColumn fx:id="column5" editable="false" prefWidth="100.0" sortable="false" text="Start Date" />
+        <TableColumn fx:id="column6" editable="false" prefWidth="100.0" sortable="false" text="End Date" />
+        <TableColumn fx:id="column7" editable="false" prefWidth="100.0" sortable="false" text="Units" />
+    </columns>
+</TableView>

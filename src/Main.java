@@ -11,6 +11,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
         primaryStage.setTitle("Broncodirect");
         primaryStage.setScene(new Scene(root, 1280, 720));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
