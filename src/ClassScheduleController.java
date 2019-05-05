@@ -2,7 +2,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 public class ClassScheduleController implements Initializable {
 
     @FXML private TableView<classSchedule> tableView;
-    @FXML private TableColumn<classSchedule, Button> column0;
+    @FXML private TableColumn<classSchedule, CheckBox> column0;
     @FXML private TableColumn<classSchedule, String> column1;
     @FXML private TableColumn<classSchedule, String> column2;
     @FXML private TableColumn<classSchedule, String> column3;
@@ -21,6 +21,8 @@ public class ClassScheduleController implements Initializable {
     @FXML private TableColumn<classSchedule, String> column5;
     @FXML private TableColumn<classSchedule, String> column6;
     @FXML private TableColumn<classSchedule, String> column7;
+
+    @FXML private CheckBox checkAll;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

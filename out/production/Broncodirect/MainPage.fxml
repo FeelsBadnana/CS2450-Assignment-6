@@ -1,123 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
-   <top>
-      <HBox fx:id="topBarController" alignment="CENTER" prefHeight="117.0" prefWidth="1081.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="101.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/home.png" />
-               </image>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </ImageView>
-            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="400.0" spacing="10.0">
-                     <children>
-                        <TextField alignment="TOP_LEFT" maxHeight="40.0" maxWidth="1000.0" minHeight="15.0" minWidth="100.0" prefHeight="40.0" prefWidth="1000.0" promptText="Search">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                        <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/search.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </ImageView>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="425.0" spacing="10.0">
-                     <children>
-                        <Label text="Subject">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <ComboBox promptText="Select" />
-                        <Label text="Course #">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <ComboBox layoutX="10.0" layoutY="10.0" promptText="Select" />
-                        <Label text="Instructor">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <ComboBox layoutX="60.0" layoutY="10.0" promptText="Select" />
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </VBox.margin>
-                  </HBox>
-               </children>
-            </VBox>
-            <ImageView fitHeight="73.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/cart.png" />
-               </image>
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-               </HBox.margin>
-            </ImageView>
-         </children>
-      </HBox>
-   </top>
-   <center>
-      <TableView fx:id="classScheduleController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="950.0" BorderPane.alignment="CENTER">
-          <columns>
-              <TableColumn editable="false" prefWidth="50.0" sortable="false">
-                  <graphic>
-                      <CheckBox fx:id="column0" mnemonicParsing="false" />
-                  </graphic>
-            </TableColumn>
-              <TableColumn fx:id="column1" editable="false" prefWidth="200.0" sortable="false" text="Class" />
-              <TableColumn fx:id="column2" editable="false" prefWidth="200.0" sortable="false" text="Day/Times" />
-              <TableColumn fx:id="column3" editable="false" prefWidth="100.0" sortable="false" text="Instructor" />
-              <TableColumn fx:id="column4" editable="false" prefWidth="100.0" sortable="false" text="Room" />
-              <TableColumn fx:id="column5" editable="false" prefWidth="100.0" sortable="false" text="Start Date" />
-              <TableColumn fx:id="column6" editable="false" prefWidth="100.0" sortable="false" text="End Date" />
-              <TableColumn fx:id="column7" editable="false" prefWidth="100.0" sortable="false" text="Units" />
-          </columns>
-      </TableView>
-   </center>
-</BorderPane>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <fx:include source="ClassSchedule.fxml" />
+         </center>
+         <top>
+            <fx:include source="TopBar.fxml" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

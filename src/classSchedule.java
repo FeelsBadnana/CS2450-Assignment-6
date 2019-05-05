@@ -1,7 +1,9 @@
+import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 
 public class classSchedule {
 
+    @FXML
     private String className = null;
     private String dayTime = null;
     private String instructor = null;
