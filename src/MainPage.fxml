@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <center>
+      <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="950.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="50.0">
+               <graphic>
+                  <CheckBox mnemonicParsing="false" />
+               </graphic></TableColumn>
+          <TableColumn prefWidth="200.0" text="Class" />
+            <TableColumn prefWidth="200.0" text="Day/Times" />
+            <TableColumn prefWidth="100.0" text="Instructor" />
+            <TableColumn prefWidth="100.0" text="Room" />
+            <TableColumn prefWidth="100.0" text="Start Date" />
+            <TableColumn prefWidth="100.0" text="End Date" />
+            <TableColumn prefWidth="100.0" text="Units" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="101.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/home.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <TextField alignment="TOP_LEFT" maxHeight="40.0" maxWidth="1000.0" minHeight="15.0" minWidth="100.0" prefHeight="40.0" prefWidth="1000.0" promptText="Search">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/search.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="425.0" spacing="10.0">
+                     <children>
+                        <Label text="Subject">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox promptText="Select" />
+                        <Label text="Course #">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="10.0" layoutY="10.0" promptText="Select" />
+                        <Label text="Instructor">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox layoutX="60.0" layoutY="10.0" promptText="Select" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fitHeight="73.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cart.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
