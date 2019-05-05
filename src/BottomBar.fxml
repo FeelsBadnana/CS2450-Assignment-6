@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+
+<ButtonBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="227.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+  <buttons>
+    <Button mnemonicParsing="false" text="Add" />
+      <Button mnemonicParsing="false" text="Drop" />
+      <Button mnemonicParsing="false" text="Swap" />
+  </buttons>
+</ButtonBar>
