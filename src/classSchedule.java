@@ -1,4 +1,3 @@
-import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 
 public class classSchedule {
@@ -72,4 +71,6 @@ public class classSchedule {
     public String getUnit() {return unit;}
 
     public void setUnit(String unit) {this.unit = unit;}
+
+    public String getSectionNum() {return sectionNum;}
 }

@@ -38,11 +38,11 @@ public class SearchResultsController0 implements Initializable {
 
     private ObservableList<classSchedule> getCS2400() {
         ObservableList<classSchedule> classList = FXCollections.observableArrayList();
-        classList.addAll(new classSchedule("Data Structures and Advanced Programming", "LECTURE-1", "TueThu 12:00PM-2PM", "Ben Steichen",
+        classList.addAll(new classSchedule("Data Structures and Advanced Programming", "LECTURE-1 (12345)", "TueThu 12:00PM-2PM", "Ben Steichen",
                         "8-2324", "8/23/2019", "12/15/2019", "3 units"),
-                new classSchedule("Data Structures and Advanced Programming","LECTURE-2", "MonWed 5:00PM-7:45PM", "John Smith",
+                new classSchedule("Data Structures and Advanced Programming","LECTURE-2 (23456)", "MonWed 5:00PM-7:45PM", "John Smith",
                         "8-3745", "8/23/2019", "12/15/2019", "3 units"),
-                new classSchedule("Data Structures and Advanced Programming","LECTURE-3", "MonWedFri 1:23PM-4:56PM", "Mellisa Wang",
+                new classSchedule("Data Structures and Advanced Programming","LECTURE-3 (34567)", "MonWedFri 1:23PM-4:56PM", "Mellisa Wang",
                         "3-1723", "8/23/2019", "12/15/2019", "3 units"));
 
         return classList;
