@@ -40,12 +40,12 @@
                      </VBox.margin>
                   </Label>
                   <fx:include source="SearchedClasses0.fxml" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="Add to Cart">
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: yellow; -fx-border-color: gray;" text="Add to Cart">
                      <VBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
                </children>

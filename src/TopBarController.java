@@ -80,7 +80,14 @@ public class TopBarController implements Initializable {
 
     public void cartButtonPushed(MouseEvent event) throws IOException
     {
+        Parent tableViewParent = FXMLLoader.load(getClass().getResource("ShoppingCartPage.fxml"));
+        Scene tableViewScene = new Scene(tableViewParent);
 
+        //This line gets the Stage information
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void cartButtonHover(MouseEvent event) throws IOException

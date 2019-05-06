@@ -2,10 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.text.Font?>
 
 <ButtonBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="227.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BottomBarController">
   <buttons>
-      <Button fx:id="add" mnemonicParsing="false" text="Enroll" />
+      <Button fx:id="add" mnemonicParsing="false" prefWidth="103.0" style="-fx-background-color: yellow; -fx-border-color: gray;" text="Enroll">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
       <Button fx:id="drop" mnemonicParsing="false" text="Drop" />
       <Button fx:id="swap" mnemonicParsing="false" text="Swap" />
   </buttons>
