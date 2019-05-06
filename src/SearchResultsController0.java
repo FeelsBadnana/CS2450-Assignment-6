@@ -10,11 +10,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ClassScheduleController implements Initializable {
+public class SearchResultsController0 implements Initializable {
 
-    public ObservableList<classSchedule> enrolledClasses;
-
-    @FXML private TableView<classSchedule> tableView;
+    @FXML private TableView<classSchedule> tableView0;
     @FXML private TableColumn<classSchedule, CheckBox> column0;
     @FXML private TableColumn<classSchedule, String> column1;
     @FXML private TableColumn<classSchedule, String> column2;
@@ -24,12 +22,10 @@ public class ClassScheduleController implements Initializable {
     @FXML private TableColumn<classSchedule, String> column6;
     @FXML private TableColumn<classSchedule, String> column7;
 
-    @FXML private CheckBox checkAll;
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         column0.setCellValueFactory(new PropertyValueFactory<>("select"));
-        column1.setCellValueFactory(new PropertyValueFactory<>("className"));
+        column1.setCellValueFactory(new PropertyValueFactory<>("sectionNum"));
         column2.setCellValueFactory(new PropertyValueFactory<>("dayTime"));
         column3.setCellValueFactory(new PropertyValueFactory<>("instructor"));
         column4.setCellValueFactory(new PropertyValueFactory<>("room"));
@@ -37,22 +33,18 @@ public class ClassScheduleController implements Initializable {
         column6.setCellValueFactory(new PropertyValueFactory<>("endDate"));
         column7.setCellValueFactory(new PropertyValueFactory<>("unit"));
 
-        enrolledClasses = getSampleSchedule();
-        tableView.setItems(enrolledClasses);
+        tableView0.setItems(getCS2400());
     }
 
-    public ObservableList<classSchedule> getSampleSchedule()
-    {
+    private ObservableList<classSchedule> getCS2400() {
         ObservableList<classSchedule> classList = FXCollections.observableArrayList();
-        classList.addAll(new classSchedule("Graphical User Interface", "TueThu 8:00AM-10AM", "Ben Steichen",
+        classList.addAll(new classSchedule("Data Structures and Advanced Programming", "LECTURE-1", "TueThu 12:00PM-2PM", "Ben Steichen",
                         "8-2324", "8/23/2019", "12/15/2019", "3 units"),
-                        new classSchedule("Numerical Methods", "MonWed 1:00PM-2:45PM", "John Smith",
+                new classSchedule("Data Structures and Advanced Programming","LECTURE-2", "MonWed 5:00PM-7:45PM", "John Smith",
                         "8-3745", "8/23/2019", "12/15/2019", "3 units"),
-                        new classSchedule("Software Engineering", "MonWedFri 9:00AM-10AM", "Mellisa Wang",
+                new classSchedule("Data Structures and Advanced Programming","LECTURE-3", "MonWedFri 1:23PM-4:56PM", "Mellisa Wang",
                         "3-1723", "8/23/2019", "12/15/2019", "3 units"));
 
         return classList;
-
     }
-
 }

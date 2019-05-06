@@ -3,14 +3,14 @@ import javafx.scene.control.CheckBox;
 
 public class classSchedule {
 
-    @FXML
-    private String className = null;
-    private String dayTime = null;
-    private String instructor = null;
-    private String room = null;
-    private String startDate = null;
-    private String endDate = null;
-    private String unit = null;
+    private String className;
+    private String sectionNum;
+    private String dayTime;
+    private String instructor;
+    private String room;
+    private String startDate;
+    private String endDate;
+    private String unit;
     private CheckBox select;
 
 
@@ -25,6 +25,21 @@ public class classSchedule {
         this.unit = unit;
 
     }
+
+    public classSchedule(String className, String sectionNum, String dayTime, String instructor, String room, String startDate, String endDate, String unit) {
+        this.select = new CheckBox();
+        this.sectionNum = sectionNum;
+        this.className = className;
+        this.dayTime = dayTime;
+        this.instructor = instructor;
+        this.room = room;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.unit = unit;
+
+    }
+
+
 
     public CheckBox getSelect() {return select;}
 

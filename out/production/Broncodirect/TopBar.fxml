@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER" prefHeight="117.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TopBarController">
+<HBox alignment="CENTER" prefHeight="117.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TopBarController">
    <children>
-      <ImageView fx:id="home" fitHeight="101.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="home" fitHeight="101.0" fitWidth="103.0" onMouseClicked="#homeButtonPushed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/home.png" />
          </image>
@@ -43,6 +49,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="32.0" prefWidth="425.0" spacing="10.0">
                <children>
+                  <Button mnemonicParsing="false" onAction="#searchButtonPushed" text="Button" />
                   <Label fx:id="subjectLabel" text="Subject">
                      <font>
                         <Font size="18.0" />
