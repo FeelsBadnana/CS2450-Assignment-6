@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="403.0" prefWidth="141.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilterBarController">
+<VBox prefHeight="403.0" prefWidth="175.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilterBarController">
    <children>
       <Label text="Filter by">
          <font>
@@ -60,7 +60,7 @@
                </HBox.margin>
             </Label>
             <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" />
-            <ComboBox fx:id="timeBox0" prefHeight="25.0" prefWidth="5.0">
+            <ComboBox fx:id="timeBox0" prefHeight="25.0" prefWidth="65.0">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
@@ -81,7 +81,7 @@
                </HBox.margin>
             </Label>
             <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" />
-            <ComboBox fx:id="timeBox1" prefHeight="25.0" prefWidth="5.0">
+            <ComboBox fx:id="timeBox1" prefHeight="25.0" prefWidth="65.0">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>

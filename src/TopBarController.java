@@ -4,9 +4,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -29,10 +27,14 @@ public class TopBarController implements Initializable {
     @FXML private Label instructorLabel;
     @FXML Controller mainController;
 
+    @FXML private ContextMenu contextMenu;
+
+
     public void injectMainController(Controller controller)
     {
         this.mainController = controller;
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         subjectBox.getItems().addAll("CS", "ENG", "MAT");
@@ -40,12 +42,20 @@ public class TopBarController implements Initializable {
         numberBox.getItems().addAll("2400", "3310", "4800");
 
         instructorBox.getItems().addAll("B. Steichen", "is", "awesome");
+
+        contextMenu = new ContextMenu();
+
+        // create menuitems
+        CheckMenuItem menuItem1 = new CheckMenuItem("CS 2400 (12345)");
+        CheckMenuItem menuItem2 = new CheckMenuItem("CS 4800 (23456)");
+
+        // add menu items to menu
+        contextMenu.getItems().add(menuItem1);
+        contextMenu.getItems().add(menuItem2);
     }
 
     public void searchButtonPushed(MouseEvent event) throws IOException
     {
-        /*FXMLLoader loader = FXMLLoader.load(getClass().getResource("SearchResults.fxml"));
-        searchBar.getScene().setRoot(loader.getRoot());*/
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("SearchResults.fxml"));
         Scene tableViewScene = new Scene(tableViewParent);
 
@@ -71,5 +81,15 @@ public class TopBarController implements Initializable {
     public void cartButtonPushed(MouseEvent event) throws IOException
     {
 
+    }
+
+    public void cartButtonHover(MouseEvent event) throws IOException
+    {
+        contextMenu.show(cart, event.getScreenX(), event.getScreenY());
+    }
+
+    public void cartButtonHoverOff(MouseEvent event) throws IOException
+    {
+        contextMenu.hide();
     }
 }

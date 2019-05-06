@@ -5,7 +5,7 @@
 
 <ButtonBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="227.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BottomBarController">
   <buttons>
-      <Button fx:id="add" mnemonicParsing="false" text="Add" />
+      <Button fx:id="add" mnemonicParsing="false" text="Enroll" />
       <Button fx:id="drop" mnemonicParsing="false" text="Drop" />
       <Button fx:id="swap" mnemonicParsing="false" text="Swap" />
   </buttons>

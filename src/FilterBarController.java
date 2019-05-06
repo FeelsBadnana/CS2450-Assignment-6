@@ -12,7 +12,9 @@ public class FilterBarController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         timeBox0.getItems().addAll("AM", "PM");
+        timeBox0.getSelectionModel().select(0);
 
         timeBox1.getItems().addAll("AM", "PM");
+        timeBox1.getSelectionModel().select(1);
     }
 }
