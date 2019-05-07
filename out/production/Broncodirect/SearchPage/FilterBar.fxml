@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox prefHeight="403.0" prefWidth="175.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchPage.FilterBarController">
+   <children>
+      <Label text="Filter by">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label text="Class Date">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <CheckBox mnemonicParsing="false" text="Monday">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </CheckBox>
+      <CheckBox layoutX="15.0" layoutY="62.0" mnemonicParsing="false" text="Tuesday">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </CheckBox>
+      <CheckBox layoutX="15.0" layoutY="62.0" mnemonicParsing="false" text="Wednesday">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </CheckBox>
+      <CheckBox layoutX="15.0" layoutY="62.0" mnemonicParsing="false" text="Thursday">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </CheckBox>
+      <CheckBox layoutX="15.0" layoutY="62.0" mnemonicParsing="false" text="Friday">
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+      </CheckBox>
+      <Label layoutX="20.0" layoutY="45.0" text="Class Hours">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" top="15.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="30.0" prefWidth="131.0">
+         <children>
+            <TextField prefHeight="25.0" prefWidth="40.0" />
+            <Label alignment="CENTER" text=":">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="3.0" />
+               </HBox.margin>
+            </Label>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" />
+            <ComboBox fx:id="timeBox0" prefHeight="25.0" prefWidth="65.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <Label text="to">
+         <VBox.margin>
+            <Insets bottom="5.0" left="8.0" />
+         </VBox.margin>
+      </Label>
+      <HBox layoutX="15.0" layoutY="204.0" prefHeight="30.0" prefWidth="131.0">
+         <children>
+            <TextField prefHeight="25.0" prefWidth="40.0" />
+            <Label alignment="CENTER" text=":">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="3.0" />
+               </HBox.margin>
+            </Label>
+            <TextField layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0" />
+            <ComboBox fx:id="timeBox1" prefHeight="25.0" prefWidth="65.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+   </padding>
+</VBox>

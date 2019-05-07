@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TableView fx:id="tableView1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchPage.SearchResultsController1">
+   <columns>
+      <TableColumn fx:id="column8" editable="false" prefWidth="50.0" sortable="false" />
+      <TableColumn fx:id="column9" editable="false" prefWidth="200.0" sortable="false" text="Section / Class Number" />
+      <TableColumn fx:id="column10" editable="false" prefWidth="200.0" sortable="false" text="Day/Times" />
+      <TableColumn fx:id="column11" editable="false" prefWidth="100.0" sortable="false" text="Instructor" />
+      <TableColumn fx:id="column12" editable="false" prefWidth="100.0" sortable="false" text="Room" />
+      <TableColumn fx:id="column13" editable="false" prefWidth="100.0" sortable="false" text="Start Date" />
+      <TableColumn fx:id="column14" editable="false" prefWidth="100.0" sortable="false" text="End Date" />
+      <TableColumn fx:id="column15" editable="false" prefWidth="100.0" sortable="false" text="Units" />
+   </columns>
+</TableView>

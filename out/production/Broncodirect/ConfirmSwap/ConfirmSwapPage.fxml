@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ConfirmSwap.ConfirmSwapControllerMain">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <top>
+            <fx:include source="../TopBar/TopBar.fxml" />
+         </top>
+         <bottom>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="239.0" prefWidth="1280.0" />
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="950.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Swap">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" text="Drop the following classes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <fx:include source="ConfirmSwapTable0.fxml" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Enroll the following classes">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <fx:include source="ConfirmSwapTable1.fxml" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#confirmButtonPushed" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: yellow; -fx-border-color: gray;" text="Confirm">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <fx:include source="../GeneralButtons/CancelButton.fxml" />
+                           </children>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
