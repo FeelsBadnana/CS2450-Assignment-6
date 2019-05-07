@@ -1,4 +1,6 @@
 import javafx.scene.control.CheckBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class classSchedule {
 
@@ -10,6 +12,7 @@ public class classSchedule {
     private String startDate;
     private String endDate;
     private String unit;
+
     private CheckBox select;
 
 

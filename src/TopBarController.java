@@ -37,11 +37,11 @@ public class TopBarController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        subjectBox.getItems().addAll("CS", "ENG", "MAT");
+        subjectBox.getItems().addAll("CS", "ENG", "MAT", "");
 
-        numberBox.getItems().addAll("2400", "3310", "4800");
+        numberBox.getItems().addAll("2400", "3310", "4800", "");
 
-        instructorBox.getItems().addAll("B. Steichen", "is", "awesome");
+        instructorBox.getItems().addAll("B. Steichen", "is", "awesome", "");
 
         contextMenu = new ContextMenu();
 
@@ -92,11 +92,8 @@ public class TopBarController implements Initializable {
 
     public void cartButtonHover(MouseEvent event) throws IOException
     {
-        contextMenu.show(cart, event.getScreenX(), event.getScreenY());
+        if(!contextMenu.isShowing())
+            contextMenu.show(cart, event.getScreenX(), event.getScreenY());
     }
 
-    public void cartButtonHoverOff(MouseEvent event) throws IOException
-    {
-        contextMenu.hide();
-    }
 }
